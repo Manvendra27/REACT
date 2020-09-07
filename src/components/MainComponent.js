@@ -55,7 +55,7 @@ class Main extends Component {
         <Header />
         <Switch>
               <Route path='/home' component={HomePage} />
-              <Route path='/about' component={About}/>
+              <Route path='/about' component={() => <About leaders={this.state.leaders}/>} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
               <Route exact path='/contactus' component={Contact} />
